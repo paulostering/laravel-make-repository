@@ -386,6 +386,16 @@ abstract class BaseRepository implements RepositoryContract
 
         return $this;
     }
+    
+    /**
+     * Get a new model instance.
+     *
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+    public function newInstance()
+    {
+        return $this->model->newInstance();
+    }
 
     /**
      * Create a new instance of the model's query builder.
